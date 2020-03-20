@@ -1,0 +1,572 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+*[type="checkbox"],
+*[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*[type="number"]::-webkit-inner-spin-button,
+*[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+*[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+*[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button,
+[type="button"],
+*[type="reset"],
+*[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+*[type="button"]::-moz-focus-inner,
+*[type="reset"]::-moz-focus-inner,
+*[type="submit"]::-moz-focus-inner {
+  border-style: none;
+}
+
+button:-moz-focusring,
+*[type="button"]:-moz-focusring,
+*[type="reset"]:-moz-focusring,
+*[type="submit"]:-moz-focusring {
+  outline: none;
+}
+
+[type="text"],
+[type="password"] {
+  -webkit-appearance: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+html {
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-scrolling: touch;
+}
+
+a {
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+label {
+  font-weight: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+input,
+select,
+textarea,
+button,
+:focus {
+  outline: none;
+  resize: none;
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+@-webkit-keyframes top1 {
+  0% {
+    margin-top: 0.5rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -1.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes top1 {
+  0% {
+    margin-top: 0.5rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -1.5rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show_text {
+  0% {
+    opacity: 0;
+    margin-top: 1.25rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes show_text {
+  0% {
+    opacity: 0;
+    margin-top: 1.25rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.public_top {
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/top.png) no-repeat;
+  background-size: 100%;
+  width: 2.6rem;
+  height: 2.35rem;
+  -webkit-animation: top1 2s infinite;
+          animation: top1 2s infinite;
+}
+
+.bodybox {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.bodybox .text1, .bodybox .page4 .text2, .bodybox .page5 .text2, .bodybox .page6 .text2, .bodybox .page7 .text2, .bodybox .page8 .text2, .bodybox .page9 .text2, .bodybox .page10 .text2, .bodybox .page11 .text2, .bodybox .page12 .text2, .bodybox .page13 .text2, .bodybox .page12 .text3, .bodybox .page12 .text4 {
+  opacity: 0;
+}
+.bodybox .text2 {
+  opacity: 0;
+}
+.bodybox .text3 {
+  opacity: 0;
+}
+.bodybox .text4 {
+  opacity: 0;
+}
+.bodybox .page_loading {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading.jpg) no-repeat top center #11193e;
+  background-size: 100%;
+  position: relative;
+}
+.bodybox .page_loading .loading_gif {
+  width: 3.125rem;
+  height: 2.925rem;
+  position: absolute;
+  top: 14.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/loading.gif) no-repeat;
+  background-size: 100%;
+}
+.bodybox .page_loading .ks {
+  position: absolute;
+  width: 4.65rem;
+  height: 1.825rem;
+  background: url(../img/start.png) no-repeat center;
+  background-size: 100%;
+  top: 19.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.bodybox .page1 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading.jpg) no-repeat top center #11193e;
+  background-size: 100%;
+  position: relative;
+  background-image: url(../img/1.jpg);
+}
+.bodybox .page1 .text1, .bodybox .page1 .page4 .text2, .bodybox .page4 .page1 .text2, .bodybox .page1 .page5 .text2, .bodybox .page5 .page1 .text2, .bodybox .page1 .page6 .text2, .bodybox .page6 .page1 .text2, .bodybox .page1 .page7 .text2, .bodybox .page7 .page1 .text2, .bodybox .page1 .page8 .text2, .bodybox .page8 .page1 .text2, .bodybox .page1 .page9 .text2, .bodybox .page9 .page1 .text2, .bodybox .page1 .page10 .text2, .bodybox .page10 .page1 .text2, .bodybox .page1 .page11 .text2, .bodybox .page11 .page1 .text2, .bodybox .page1 .page12 .text2, .bodybox .page12 .page1 .text2, .bodybox .page1 .page13 .text2, .bodybox .page13 .page1 .text2, .bodybox .page1 .page12 .text3, .bodybox .page12 .page1 .text3, .bodybox .page1 .page12 .text4, .bodybox .page12 .page1 .text4 {
+  position: absolute;
+  width: 13.85rem;
+  height: 7.175rem;
+  top: 6.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/page1_txt.png) no-repeat;
+  background-size: 100%;
+}
+.bodybox .page2 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading.jpg) no-repeat top center #11193e;
+  background-size: 100%;
+  position: relative;
+  background-image: url(../img/2.jpg);
+}
+.bodybox .page2 .text1, .bodybox .page2 .page4 .text2, .bodybox .page4 .page2 .text2, .bodybox .page2 .page5 .text2, .bodybox .page5 .page2 .text2, .bodybox .page2 .page6 .text2, .bodybox .page6 .page2 .text2, .bodybox .page2 .page7 .text2, .bodybox .page7 .page2 .text2, .bodybox .page2 .page8 .text2, .bodybox .page8 .page2 .text2, .bodybox .page2 .page9 .text2, .bodybox .page9 .page2 .text2, .bodybox .page2 .page10 .text2, .bodybox .page10 .page2 .text2, .bodybox .page2 .page11 .text2, .bodybox .page11 .page2 .text2, .bodybox .page2 .page12 .text2, .bodybox .page12 .page2 .text2, .bodybox .page2 .page13 .text2, .bodybox .page13 .page2 .text2, .bodybox .page2 .page12 .text3, .bodybox .page12 .page2 .text3, .bodybox .page2 .page12 .text4, .bodybox .page12 .page2 .text4 {
+  position: absolute;
+  width: 15.025rem;
+  height: 7.2rem;
+  top: 8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/page2_txt.png) no-repeat;
+  background-size: 100%;
+}
+.bodybox .page3 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading.jpg) no-repeat top center #11193e;
+  background-size: 100%;
+  position: relative;
+  background-image: url(../img/3.jpg);
+}
+.bodybox .page3 .text1, .bodybox .page3 .page4 .text2, .bodybox .page4 .page3 .text2, .bodybox .page3 .page5 .text2, .bodybox .page5 .page3 .text2, .bodybox .page3 .page6 .text2, .bodybox .page6 .page3 .text2, .bodybox .page3 .page7 .text2, .bodybox .page7 .page3 .text2, .bodybox .page3 .page8 .text2, .bodybox .page8 .page3 .text2, .bodybox .page3 .page9 .text2, .bodybox .page9 .page3 .text2, .bodybox .page3 .page10 .text2, .bodybox .page10 .page3 .text2, .bodybox .page3 .page11 .text2, .bodybox .page11 .page3 .text2, .bodybox .page3 .page12 .text2, .bodybox .page12 .page3 .text2, .bodybox .page3 .page13 .text2, .bodybox .page13 .page3 .text2, .bodybox .page3 .page12 .text3, .bodybox .page12 .page3 .text3, .bodybox .page3 .page12 .text4, .bodybox .page12 .page3 .text4 {
+  position: absolute;
+  width: 5.65rem;
+  height: 13.25rem;
+  top: 11.05rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/page3_1.png) no-repeat;
+  background-size: 100%;
+}
+.bodybox .page4, .bodybox .page5, .bodybox .page6, .bodybox .page7, .bodybox .page8, .bodybox .page9, .bodybox .page10, .bodybox .page11, .bodybox .page12, .bodybox .page13 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading.jpg) no-repeat top center #11193e;
+  background-size: 100%;
+  position: relative;
+  background-image: url(../img/4.jpg);
+}
+.bodybox .page4 .text1, .bodybox .page5 .text1, .bodybox .page6 .text1, .bodybox .page7 .text1, .bodybox .page8 .text1, .bodybox .page9 .text1, .bodybox .page10 .text1, .bodybox .page11 .text1, .bodybox .page12 .text1, .bodybox .page13 .text1, .bodybox .page4 .text2, .bodybox .page5 .page4 .text2, .bodybox .page4 .page5 .text2, .bodybox .page6 .page4 .text2, .bodybox .page4 .page6 .text2, .bodybox .page7 .page4 .text2, .bodybox .page4 .page7 .text2, .bodybox .page8 .page4 .text2, .bodybox .page4 .page8 .text2, .bodybox .page9 .page4 .text2, .bodybox .page4 .page9 .text2, .bodybox .page10 .page4 .text2, .bodybox .page4 .page10 .text2, .bodybox .page11 .page4 .text2, .bodybox .page4 .page11 .text2, .bodybox .page12 .page4 .text2, .bodybox .page4 .page12 .text2, .bodybox .page13 .page4 .text2, .bodybox .page4 .page13 .text2, .bodybox .page4 .page5 .text2, .bodybox .page5 .page4 .text2, .bodybox .page5 .text2, .bodybox .page6 .page5 .text2, .bodybox .page5 .page6 .text2, .bodybox .page7 .page5 .text2, .bodybox .page5 .page7 .text2, .bodybox .page8 .page5 .text2, .bodybox .page5 .page8 .text2, .bodybox .page9 .page5 .text2, .bodybox .page5 .page9 .text2, .bodybox .page10 .page5 .text2, .bodybox .page5 .page10 .text2, .bodybox .page11 .page5 .text2, .bodybox .page5 .page11 .text2, .bodybox .page12 .page5 .text2, .bodybox .page5 .page12 .text2, .bodybox .page13 .page5 .text2, .bodybox .page5 .page13 .text2, .bodybox .page4 .page6 .text2, .bodybox .page6 .page4 .text2, .bodybox .page5 .page6 .text2, .bodybox .page6 .page5 .text2, .bodybox .page6 .text2, .bodybox .page7 .page6 .text2, .bodybox .page6 .page7 .text2, .bodybox .page8 .page6 .text2, .bodybox .page6 .page8 .text2, .bodybox .page9 .page6 .text2, .bodybox .page6 .page9 .text2, .bodybox .page10 .page6 .text2, .bodybox .page6 .page10 .text2, .bodybox .page11 .page6 .text2, .bodybox .page6 .page11 .text2, .bodybox .page12 .page6 .text2, .bodybox .page6 .page12 .text2, .bodybox .page13 .page6 .text2, .bodybox .page6 .page13 .text2, .bodybox .page4 .page7 .text2, .bodybox .page7 .page4 .text2, .bodybox .page5 .page7 .text2, .bodybox .page7 .page5 .text2, .bodybox .page6 .page7 .text2, .bodybox .page7 .page6 .text2, .bodybox .page7 .text2, .bodybox .page8 .page7 .text2, .bodybox .page7 .page8 .text2, .bodybox .page9 .page7 .text2, .bodybox .page7 .page9 .text2, .bodybox .page10 .page7 .text2, .bodybox .page7 .page10 .text2, .bodybox .page11 .page7 .text2, .bodybox .page7 .page11 .text2, .bodybox .page12 .page7 .text2, .bodybox .page7 .page12 .text2, .bodybox .page13 .page7 .text2, .bodybox .page7 .page13 .text2, .bodybox .page4 .page8 .text2, .bodybox .page8 .page4 .text2, .bodybox .page5 .page8 .text2, .bodybox .page8 .page5 .text2, .bodybox .page6 .page8 .text2, .bodybox .page8 .page6 .text2, .bodybox .page7 .page8 .text2, .bodybox .page8 .page7 .text2, .bodybox .page8 .text2, .bodybox .page9 .page8 .text2, .bodybox .page8 .page9 .text2, .bodybox .page10 .page8 .text2, .bodybox .page8 .page10 .text2, .bodybox .page11 .page8 .text2, .bodybox .page8 .page11 .text2, .bodybox .page12 .page8 .text2, .bodybox .page8 .page12 .text2, .bodybox .page13 .page8 .text2, .bodybox .page8 .page13 .text2, .bodybox .page4 .page9 .text2, .bodybox .page9 .page4 .text2, .bodybox .page5 .page9 .text2, .bodybox .page9 .page5 .text2, .bodybox .page6 .page9 .text2, .bodybox .page9 .page6 .text2, .bodybox .page7 .page9 .text2, .bodybox .page9 .page7 .text2, .bodybox .page8 .page9 .text2, .bodybox .page9 .page8 .text2, .bodybox .page9 .text2, .bodybox .page10 .page9 .text2, .bodybox .page9 .page10 .text2, .bodybox .page11 .page9 .text2, .bodybox .page9 .page11 .text2, .bodybox .page12 .page9 .text2, .bodybox .page9 .page12 .text2, .bodybox .page13 .page9 .text2, .bodybox .page9 .page13 .text2, .bodybox .page4 .page10 .text2, .bodybox .page10 .page4 .text2, .bodybox .page5 .page10 .text2, .bodybox .page10 .page5 .text2, .bodybox .page6 .page10 .text2, .bodybox .page10 .page6 .text2, .bodybox .page7 .page10 .text2, .bodybox .page10 .page7 .text2, .bodybox .page8 .page10 .text2, .bodybox .page10 .page8 .text2, .bodybox .page9 .page10 .text2, .bodybox .page10 .page9 .text2, .bodybox .page10 .text2, .bodybox .page11 .page10 .text2, .bodybox .page10 .page11 .text2, .bodybox .page12 .page10 .text2, .bodybox .page10 .page12 .text2, .bodybox .page13 .page10 .text2, .bodybox .page10 .page13 .text2, .bodybox .page4 .page11 .text2, .bodybox .page11 .page4 .text2, .bodybox .page5 .page11 .text2, .bodybox .page11 .page5 .text2, .bodybox .page6 .page11 .text2, .bodybox .page11 .page6 .text2, .bodybox .page7 .page11 .text2, .bodybox .page11 .page7 .text2, .bodybox .page8 .page11 .text2, .bodybox .page11 .page8 .text2, .bodybox .page9 .page11 .text2, .bodybox .page11 .page9 .text2, .bodybox .page10 .page11 .text2, .bodybox .page11 .page10 .text2, .bodybox .page11 .text2, .bodybox .page12 .page11 .text2, .bodybox .page11 .page12 .text2, .bodybox .page13 .page11 .text2, .bodybox .page11 .page13 .text2, .bodybox .page4 .page12 .text2, .bodybox .page12 .page4 .text2, .bodybox .page5 .page12 .text2, .bodybox .page12 .page5 .text2, .bodybox .page6 .page12 .text2, .bodybox .page12 .page6 .text2, .bodybox .page7 .page12 .text2, .bodybox .page12 .page7 .text2, .bodybox .page8 .page12 .text2, .bodybox .page12 .page8 .text2, .bodybox .page9 .page12 .text2, .bodybox .page12 .page9 .text2, .bodybox .page10 .page12 .text2, .bodybox .page12 .page10 .text2, .bodybox .page11 .page12 .text2, .bodybox .page12 .page11 .text2, .bodybox .page12 .text2, .bodybox .page13 .page12 .text2, .bodybox .page12 .page13 .text2, .bodybox .page4 .page13 .text2, .bodybox .page13 .page4 .text2, .bodybox .page5 .page13 .text2, .bodybox .page13 .page5 .text2, .bodybox .page6 .page13 .text2, .bodybox .page13 .page6 .text2, .bodybox .page7 .page13 .text2, .bodybox .page13 .page7 .text2, .bodybox .page8 .page13 .text2, .bodybox .page13 .page8 .text2, .bodybox .page9 .page13 .text2, .bodybox .page13 .page9 .text2, .bodybox .page10 .page13 .text2, .bodybox .page13 .page10 .text2, .bodybox .page11 .page13 .text2, .bodybox .page13 .page11 .text2, .bodybox .page12 .page13 .text2, .bodybox .page13 .page12 .text2, .bodybox .page13 .text2, .bodybox .page4 .page12 .text3, .bodybox .page12 .page4 .text3, .bodybox .page5 .page12 .text3, .bodybox .page12 .page5 .text3, .bodybox .page6 .page12 .text3, .bodybox .page12 .page6 .text3, .bodybox .page7 .page12 .text3, .bodybox .page12 .page7 .text3, .bodybox .page8 .page12 .text3, .bodybox .page12 .page8 .text3, .bodybox .page9 .page12 .text3, .bodybox .page12 .page9 .text3, .bodybox .page10 .page12 .text3, .bodybox .page12 .page10 .text3, .bodybox .page11 .page12 .text3, .bodybox .page12 .page11 .text3, .bodybox .page12 .text3, .bodybox .page13 .page12 .text3, .bodybox .page12 .page13 .text3, .bodybox .page4 .page12 .text4, .bodybox .page12 .page4 .text4, .bodybox .page5 .page12 .text4, .bodybox .page12 .page5 .text4, .bodybox .page6 .page12 .text4, .bodybox .page12 .page6 .text4, .bodybox .page7 .page12 .text4, .bodybox .page12 .page7 .text4, .bodybox .page8 .page12 .text4, .bodybox .page12 .page8 .text4, .bodybox .page9 .page12 .text4, .bodybox .page12 .page9 .text4, .bodybox .page10 .page12 .text4, .bodybox .page12 .page10 .text4, .bodybox .page11 .page12 .text4, .bodybox .page12 .page11 .text4, .bodybox .page12 .text4, .bodybox .page13 .page12 .text4, .bodybox .page12 .page13 .text4 {
+  position: absolute;
+  width: 11.175rem;
+  height: 6.4rem;
+  top: 8.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/page4_1.png) no-repeat;
+  background-size: 100%;
+}
+.bodybox .page4 .text2, .bodybox .page5 .text2, .bodybox .page6 .text2, .bodybox .page7 .text2, .bodybox .page8 .text2, .bodybox .page9 .text2, .bodybox .page10 .text2, .bodybox .page11 .text2, .bodybox .page12 .text2, .bodybox .page13 .text2 {
+  background-image: url(../img/page4_2.png);
+  top: 16.75rem;
+  width: 6.825rem;
+  height: 2.35rem;
+}
+.bodybox .page4 .page_subset, .bodybox .page5 .page_subset, .bodybox .page6 .page_subset, .bodybox .page7 .page_subset, .bodybox .page8 .page_subset, .bodybox .page9 .page_subset, .bodybox .page10 .page_subset, .bodybox .page11 .page_subset, .bodybox .page12 .page_subset, .bodybox .page13 .page_subset {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 14.75rem;
+  height: 11.5rem;
+}
+.bodybox .page4 .page_subset .swiper-slide, .bodybox .page5 .page_subset .swiper-slide, .bodybox .page6 .page_subset .swiper-slide, .bodybox .page7 .page_subset .swiper-slide, .bodybox .page8 .page_subset .swiper-slide, .bodybox .page9 .page_subset .swiper-slide, .bodybox .page10 .page_subset .swiper-slide, .bodybox .page11 .page_subset .swiper-slide, .bodybox .page12 .page_subset .swiper-slide, .bodybox .page13 .page_subset .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bodybox .page4 .page_subset img, .bodybox .page5 .page_subset img, .bodybox .page6 .page_subset img, .bodybox .page7 .page_subset img, .bodybox .page8 .page_subset img, .bodybox .page9 .page_subset img, .bodybox .page10 .page_subset img, .bodybox .page11 .page_subset img, .bodybox .page12 .page_subset img, .bodybox .page13 .page_subset img {
+  display: block;
+  width: 13.4rem;
+}
+.bodybox .page5 {
+  background-image: url(../img/5.jpg);
+}
+.bodybox .page5 .text1, .bodybox .page5 .text2, .bodybox .page5 .page12 .text3, .bodybox .page12 .page5 .text3, .bodybox .page5 .page12 .text4, .bodybox .page12 .page5 .text4 {
+  width: 10.925rem;
+  height: 6.4rem;
+  top: 10.5rem;
+  background-image: url(../img/page5_1.png);
+}
+.bodybox .page5 .text2 {
+  background-image: url(../img/page5_2.png);
+  top: 19.25rem;
+  width: 7.575rem;
+  height: 2.375rem;
+}
+.bodybox .page5 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page6 {
+  background-image: url(../img/6.jpg);
+}
+.bodybox .page6 .text1, .bodybox .page6 .text2, .bodybox .page6 .page12 .text3, .bodybox .page12 .page6 .text3, .bodybox .page6 .page12 .text4, .bodybox .page12 .page6 .text4 {
+  width: 8.025rem;
+  height: 6.4rem;
+  top: 9.25rem;
+  background-image: url(../img/page6_1.png);
+}
+.bodybox .page6 .text2 {
+  background-image: url(../img/page6_2.png);
+  top: 17.75rem;
+  width: 9.45rem;
+  height: 0.875rem;
+}
+.bodybox .page6 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page7 {
+  background-image: url(../img/7.jpg);
+}
+.bodybox .page7 .text1, .bodybox .page7 .text2, .bodybox .page7 .page12 .text3, .bodybox .page12 .page7 .text3, .bodybox .page7 .page12 .text4, .bodybox .page12 .page7 .text4 {
+  width: 10.625rem;
+  height: 6.425rem;
+  top: 8rem;
+  background-image: url(../img/page7_1.png);
+}
+.bodybox .page7 .text2 {
+  background-image: url(../img/page7_2.png);
+  top: 16.75rem;
+  width: 8.275rem;
+  height: 2.375rem;
+}
+.bodybox .page7 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page8 {
+  background-image: url(../img/8.jpg);
+}
+.bodybox .page8 .text1, .bodybox .page8 .text2, .bodybox .page8 .page12 .text3, .bodybox .page12 .page8 .text3, .bodybox .page8 .page12 .text4, .bodybox .page12 .page8 .text4 {
+  top: 7.75rem;
+  width: 8.375rem;
+  height: 4.6rem;
+  background-image: url(../img/page8_1.png);
+}
+.bodybox .page8 .text2 {
+  background-image: url(../img/page8_2.png);
+  top: 15rem;
+  width: 6.775rem;
+  height: 2.375rem;
+}
+.bodybox .page8 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page9 {
+  background-image: url(../img/9.jpg);
+}
+.bodybox .page9 .text1, .bodybox .page9 .text2, .bodybox .page9 .page12 .text3, .bodybox .page12 .page9 .text3, .bodybox .page9 .page12 .text4, .bodybox .page12 .page9 .text4 {
+  top: 5.75rem;
+  width: 12.975rem;
+  height: 4.6rem;
+  background-image: url(../img/page9_1.png);
+}
+.bodybox .page9 .text2 {
+  background-image: url(../img/page9_2.png);
+  top: 23.75rem;
+  width: 6.8rem;
+  height: 2.375rem;
+}
+.bodybox .page9 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page10 {
+  background-image: url(../img/10.jpg);
+}
+.bodybox .page10 .text1, .bodybox .page10 .text2, .bodybox .page10 .page12 .text3, .bodybox .page12 .page10 .text3, .bodybox .page10 .page12 .text4, .bodybox .page12 .page10 .text4 {
+  top: 5.75rem;
+  width: 8.825rem;
+  height: 4.175rem;
+  background-image: url(../img/page10_1.png);
+}
+.bodybox .page10 .text2 {
+  background-image: url(../img/page10_2.png);
+  top: 24rem;
+  width: 6.75rem;
+  height: 2.375rem;
+}
+.bodybox .page10 .page_subset {
+  top: 11.25rem;
+}
+.bodybox .page11 {
+  background-image: url(../img/11.jpg);
+}
+.bodybox .page11 .text1, .bodybox .page11 .text2, .bodybox .page11 .page12 .text3, .bodybox .page12 .page11 .text3, .bodybox .page11 .page12 .text4, .bodybox .page12 .page11 .text4 {
+  top: 5.75rem;
+  width: 8.875rem;
+  height: 2.8rem;
+  background-image: url(../img/page11_1.png);
+}
+.bodybox .page11 .text2 {
+  background-image: url(../img/page11_2.png);
+  top: 23.75rem;
+  width: 5.275rem;
+  height: 2.375rem;
+}
+.bodybox .page11 .page_subset {
+  top: 10.75rem;
+}
+.bodybox .page12 {
+  background-image: url(../img/12.jpg);
+}
+.bodybox .page12 .text1, .bodybox .page12 .text2, .bodybox .page12 .text3, .bodybox .page12 .text4 {
+  top: 2.5rem;
+  width: 6.2rem;
+  height: 2.7rem;
+  background-image: url(../img/page12_1.png);
+}
+.bodybox .page12 .text2 {
+  background-image: url(../img/page12_2.png);
+  top: 5.75rem;
+  width: 11.375rem;
+  height: 3.875rem;
+}
+.bodybox .page12 .text3 {
+  background-image: url(../img/page12_3.png);
+  top: 12.5rem;
+  width: 6.225rem;
+  height: 2.7rem;
+}
+.bodybox .page12 .text4 {
+  background-image: url(../img/page12_4.png);
+  top: 15.5rem;
+  width: 16.05rem;
+  height: 10.7rem;
+}
+.bodybox .page13 {
+  background-image: url(../img/13.jpg);
+}
+.bodybox .page13 .text1, .bodybox .page13 .text2, .bodybox .page13 .page12 .text3, .bodybox .page12 .page13 .text3, .bodybox .page13 .page12 .text4, .bodybox .page12 .page13 .text4 {
+  top: 6.4rem;
+  width: 6.2rem;
+  height: 2.7rem;
+  background-image: url(../img/page13_1.png);
+}
+.bodybox .page13 .text2 {
+  background-image: url(../img/page13_2.png);
+  top: 9.25rem;
+  width: 9.025rem;
+  height: 10.5rem;
+}
+
+.body {
+  position: relative;
+}
+.body .audio_i {
+  position: absolute;
+  z-index: 2;
+  width: 1.625rem;
+  height: 1.8rem;
+  right: 0.975rem;
+  top: 0.85rem;
+  background: url(../img/audio.png) no-repeat center;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.animated {
+  -webkit-animation-duration: 2s !important;
+          animation-duration: 2s !important;
+}
+
+body .top_text {
+  -webkit-animation: show_text 1.5s ease-out;
+          animation: show_text 1.5s ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+body .top_text2 {
+  -webkit-animation: show_text 1.5s 1s ease-out;
+          animation: show_text 1.5s 1s ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+body .top_text3 {
+  -webkit-animation: show_text 1.5s 2s ease-out;
+          animation: show_text 1.5s 2s ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+body .top_text4 {
+  -webkit-animation: show_text 1.5s 3s ease-out;
+          animation: show_text 1.5s 3s ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.ks_wen {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+.show1 {
+  opacity: 1 !important;
+}
+
+.page_subset {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
