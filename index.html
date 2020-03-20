@@ -330,11 +330,6 @@
                     <div class="text2">
                         <img src="img/page13_2.png" alt="" id="img_qr">
                     </div>
-                    <!--canvas中的二维码-->
-                    <div id="qrDiv" style="display: none;"></div>
-                    <!--image形式的二维码-->
-                    <div class="bannerwechat" id="wecode"></div>
-
                 </div>
             </div>
         </div>
@@ -350,7 +345,7 @@
     <script language="javascript">
         $(function () {
 
-            
+
             function setfontsize() {
                 let ss = document.documentElement.clientWidth || document.body.clientWidth
                 let st = ss / 18.75
@@ -757,9 +752,11 @@
                 event.stopPropagation();//防止冒泡
                 if (audio.paused) { //如果当前是暂停状态
                     audio.play(); //播放
+                    $(this).removeClass("audio_i_x");
                     return;
                 } else {//当前是播放状态
                     audio.pause(); //暂停
+                    $(this).addClass("audio_i_x");
                 }
             })
 
@@ -776,34 +773,33 @@
                 }, 1500);
             })
 
-            $("#img_qr").on("click",function(){
+            $("#img_qr").on("touchstart", function () {
 
 
-
-//获取预览图片路径
-var getObjectURL = function(file){
-                 var url = null ;
-                 if (window.createObjectURL!=undefined) { // basic
-                 url = window.createObjectURL(file) ;
-                 } else if (window.URL!=undefined) { // mozilla(firefox)
-                 url = window.URL.createObjectURL(file) ;
-                  } else if (window.webkitURL!=undefined) { // webkit or chrome
-                  url = window.webkitURL.createObjectURL(file) ;
-                 }
-                  return url ;
-                 }
+                //获取预览图片路径
+                var getObjectURL = function (file) {
+                    var url = null;
+                    if (window.createObjectURL != undefined) { // basic
+                        url = window.createObjectURL(file);
+                    } else if (window.URL != undefined) { // mozilla(firefox)
+                        url = window.URL.createObjectURL(file);
+                    } else if (window.webkitURL != undefined) { // webkit or chrome
+                        url = window.webkitURL.createObjectURL(file);
+                    }
+                    return url;
+                }
 
                 //console.log(getObjectURL("https://www.wjx.cn/jq/62071936.aspx"));// newfile[0]是通过input file上传的二维码图片文件
-                qrcode.decode('data:image/png;base64,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');
-                qrcode.callback = function(imgMsg){
-                    console.log("imgMsg",imgMsg);
+                qrcode.decode('img/page13_2.png');
+                qrcode.callback = function (imgMsg) {
+                    console.log("imgMsg", imgMsg);
                 }
 
 
 
             })
 
-            
+
 
 
         })

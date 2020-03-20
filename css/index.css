@@ -658,6 +658,9 @@ table {
   background-size: 100%;
   cursor: pointer;
 }
+.body .audio_i_x {
+  background-image: url(../img/audio_x.png);
+}
 
 .animated {
   -webkit-animation-duration: 2s !important;

@@ -653,6 +653,9 @@ table {
     background-size: 100%;
     cursor: pointer;
   }
+  .audio_i_x{
+    background-image: url(../img/audio_x.png);
+  }
 }
 
 .animated {
@@ -742,3 +745,5 @@ body .top_text4 {
   animation: show_text 1.5s 5s ease-out;
   animation-fill-mode: both;
 }
+
+
