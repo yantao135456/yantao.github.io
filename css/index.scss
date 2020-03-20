@@ -62,8 +62,9 @@ del {
 
 html {
   //font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "PingFang SC", "Hiragino Sans GB";
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
-    sans-serif;
+  // font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+  //   sans-serif;
+  font-family: "fzjh", "Lucida Grande", "Lucida Sans Unicode", Arial, HELVETICA;
   //   font-size: 12px;
   word-wrap: break-word;
   white-space: normal;
@@ -186,7 +187,8 @@ table {
 }
 
 .bodybox {
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 1;
 
@@ -267,6 +269,132 @@ table {
       transform: translateX(-50%);
       background: url(../img/page3_1.png) no-repeat;
       background-size: 100%;
+      z-index: 100;
+    }
+    .txt1 {
+      position: absolute;
+      top: r(226px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: r(60px);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+    .txt2 {
+      position: absolute;
+      top: r(322px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: r(60px);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+    .l_txt1 {
+      position: absolute;
+      top: r(530px);
+      left: r(52px);
+      font-size: r(36px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+    }
+    .l_txt2 {
+      position: absolute;
+      top: r(638px);
+      left: r(76px);
+      font-size: r(70px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+    }
+    .l_txt3 {
+      position: absolute;
+      top: r(740px);
+      left: r(104px);
+      font-size: r(50px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+    }
+    .l_txt4 {
+      position: absolute;
+      top: r(830px);
+      left: r(56px);
+      font-size: r(60px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+    }
+    .l_txt5 {
+      position: absolute;
+      top: r(930px);
+      left: r(90px);
+      font-size: r(44px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+    }
+    .r_txt1 {
+      position: absolute;
+      top: r(502px);
+      right: r(104px);
+      font-size: r(72px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+      text-align: right;
+    }
+    .r_txt2 {
+      position: absolute;
+      top: r(614px);
+      right: r(64px);
+      font-size: r(44px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+      text-align: right;
+    }
+    .r_txt3 {
+      position: absolute;
+      top: r(728px);
+      right: r(54px);
+      font-size: r(34px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+      text-align: right;
+    }
+    .r_txt4 {
+      position: absolute;
+      top: r(806px);
+      right: r(40px);
+      font-size: r(60px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+      text-align: right;
+    }
+    .r_txt5 {
+      position: absolute;
+      top: r(896px);
+      right: r(72px);
+      font-size: r(36px);
+      color: rgba($color: #536dd1, $alpha: 0.45);
+      width: 100%;
+      text-align: right;
+    }
+    .b_txt1 {
+      position: absolute;
+      top: r(1068px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: r(30px);
+      color: #b3bee2;
+      width: 100%;
+      text-align: center;
+    }
+    .b_txt2 {
+      position: absolute;
+      top: r(1116px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: r(30px);
+      color: #b3bee2;
+      width: 100%;
+      text-align: center;
     }
   }
   .page4 {
@@ -492,10 +620,15 @@ table {
     }
     .text2 {
       @extend .text1;
-      background-image: url(../img/page13_2.png);
+      // background-image: url(../img/page13_2.png);
+      background: none;
       top: r(370px);
       width: r(361px);
       height: r(420px);
+      img{
+        display: block;
+        width: 100%;
+      }
     }
   }
 }
@@ -503,6 +636,7 @@ table {
 //声音控件
 .body {
   position: relative;
+  margin: 0 auto;
   .audio_i {
     position: absolute;
     z-index: 2;
@@ -555,8 +689,51 @@ body .top_text4 {
 //   @extend .page_subset9_1;
 // }
 
-
-.page_subset{
+.page_subset {
   opacity: 0;
 }
 
+.body_pc {
+  width: 750px;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.show2_1 {
+  animation: show_text 1.5s 1s ease-out;
+  animation-fill-mode: both;
+}
+.show2_2 {
+  animation: show_text 1.5s 1.5s ease-out;
+  animation-fill-mode: both;
+}
+.show2_3 {
+  animation: show_text 1.5s 2s ease-out;
+  animation-fill-mode: both;
+}
+.show2_4 {
+  animation: show_text 1.5s 2.5s ease-out;
+  animation-fill-mode: both;
+}
+.show2_5 {
+  animation: show_text 1.5s 3s ease-out;
+  animation-fill-mode: both;
+}
+.show2_6 {
+  animation: show_text 1.5s 3.5s ease-out;
+  animation-fill-mode: both;
+}
+.show2_7 {
+  animation: show_text 1.5s 4s ease-out;
+  animation-fill-mode: both;
+}
+.show2_8 {
+  animation: show_text 1.5s 4.5s ease-out;
+  animation-fill-mode: both;
+}
+.show2_9 {
+  animation: show_text 1.5s 5s ease-out;
+  animation-fill-mode: both;
+}

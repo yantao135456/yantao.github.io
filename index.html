@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黄埔H5</title>
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link type="text/css" rel="stylesheet" href="https://static.zhihu.com/event/zhihu2018/asset/css/font.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -40,7 +41,24 @@
             <div class="swiper-slide">
                 <div class="page3">
                     <div class="text1 ks_wen"></div>
-                    <!-- <div class="public_top"></div> -->
+                    <!-- 上面 -->
+                    <div class="txt1 opacity0">在黄埔</div>
+                    <div class="txt2 opacity0">我们共同探索成长之路</div>
+                    <!-- 左边 -->
+                    <div class="l_txt1 opacity0">修炼专注力</div>
+                    <div class="l_txt2 opacity0">逆商</div>
+                    <div class="l_txt3 opacity0">创新管理</div>
+                    <div class="l_txt4 opacity0">产品思维</div>
+                    <div class="l_txt5 opacity0">时间管理</div>
+                    <!-- 右边 -->
+                    <div class="r_txt1 opacity0">心态</div>
+                    <div class="r_txt2 opacity0">产品思维</div>
+                    <div class="r_txt3 opacity0">对广告的一些看法</div>
+                    <div class="r_txt4 opacity0">谈判思维</div>
+                    <div class="r_txt5 opacity0">理性情绪行为</div>
+                    <!-- 下面 -->
+                    <div class="b_txt1 opacity0">画一个问号</div>
+                    <div class="b_txt2 opacity0">开启黄埔之旅</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -305,7 +323,9 @@
             <div class="swiper-slide">
                 <div class="page13">
                     <div class="text1"></div>
-                    <div class="text2"></div>
+                    <div class="text2">
+                        <img src="img/page13_2.png" alt="">
+                    </div>
                     <!-- <div class="public_top"></div> -->
 
                 </div>
@@ -315,18 +335,58 @@
 
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/swiper.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/index.js"></script>
     <script language="javascript">
         $(function () {
+
+
+
             function setfontsize() {
                 let ss = document.documentElement.clientWidth || document.body.clientWidth
                 let st = ss / 18.75
                 // let st = ss / 25
                 document.documentElement.style.fontSize = st + 'px'
             }
-            setfontsize()
+
+            //判断打开的是手机端还是pc端
+            function is_check() {
+                if (typeof window != "undefined") {
+                    var userAgentInfo = navigator.userAgent;
+                    //var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+                    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"); //去掉 iPad
+                    var flag = true;
+                    for (var v = 0; v < Agents.length; v++) {
+                        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    return flag;
+                }
+                return true
+            }
+
+
+            if (is_check() == false) {
+                //手机端
+
+                setfontsize()
+
+            } else {
+
+                document.documentElement.style.fontSize = '40px'
+                $(".body").addClass("body_pc");
+
+            }
+
+
+
+
+
+
 
 
             var swiper_body = new Swiper('.bodybox', {
@@ -354,7 +414,24 @@
                                 }, 1000);
                                 break;
                             case 3:
+                                setTimeout(() => {
 
+                                    $(".page3 .opacity0").eq(0).addClass("show2_1");
+                                    $(".page3 .opacity0").eq(1).addClass("show2_2");
+                                    $(".page3 .opacity0").eq(2).addClass("show2_3");
+                                    $(".page3 .opacity0").eq(3).addClass("show2_4");
+                                    $(".page3 .opacity0").eq(4).addClass("show2_5");
+                                    $(".page3 .opacity0").eq(5).addClass("show2_6");
+                                    $(".page3 .opacity0").eq(6).addClass("show2_7");
+                                    $(".page3 .opacity0").eq(7).addClass("show2_3");
+                                    $(".page3 .opacity0").eq(8).addClass("show2_4");
+                                    $(".page3 .opacity0").eq(9).addClass("show2_5");
+                                    $(".page3 .opacity0").eq(10).addClass("show2_6");
+                                    $(".page3 .opacity0").eq(11).addClass("show2_7");
+                                    $(".page3 .opacity0").eq(12).addClass("show2_8");
+                                    $(".page3 .opacity0").eq(13).addClass("show2_9");
+
+                                }, 500);
                                 break;
                             case 4:
                                 swiper4_1.init();//现在才初始化
@@ -514,7 +591,7 @@
                     delay: 2000,
                     stopOnLastSlide: true,
                 },
-                effect: 'cube',
+                effect: 'fade',
                 init: false,
                 on: {
                     slideChangeTransitionEnd: function () {
@@ -536,7 +613,7 @@
                     delay: 2000,
                     stopOnLastSlide: true,
                 },
-                effect: 'coverflow',
+                effect: 'fade',
                 init: false,
                 on: {
                     slideChangeTransitionEnd: function () {
@@ -558,7 +635,7 @@
                     delay: 2000,
                     stopOnLastSlide: true,
                 },
-                effect: 'cube',
+                effect: 'fade',
                 init: false,
                 on: {
                     slideChangeTransitionEnd: function () {
@@ -602,7 +679,7 @@
                     delay: 2000,
                     stopOnLastSlide: true,
                 },
-                effect: 'cube',
+                effect: 'fade',
                 init: false,
                 // on: {
                 //     slideChangeTransitionEnd: function () {
@@ -624,7 +701,7 @@
                     delay: 2000,
                     stopOnLastSlide: true,
                 },
-                effect: 'coverflow',
+                effect: 'fade',
                 init: false,
                 // on: {
                 //     slideChangeTransitionEnd: function () {
