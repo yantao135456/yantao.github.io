@@ -382,11 +382,28 @@
                 effect: 'fade',
                 loop: false,
                 allowSlidePrev: false,
+                allowSlideNext: false,
                 on: {
+                    slideChangeTransitionStart: function () {
+                        // alert(this.activeIndex);
+                        console.log(this.activeIndex);
+                        // swiper_body.allowSlideNext = true;//设置
+                        switch (this.activeIndex) {
+                            case 3:
+                                swiper_body.allowSlideNext = false;//设置
+                                break;
+                        }
+                    },
                     slideChangeTransitionEnd: function () {
-
-                        switch (swiper_body.activeIndex) {
+                        // alert(this.activeIndex)
+                        // switch (swiper_body.activeIndex) {
+                        switch (this.activeIndex) {
+                            // case 0:
+                            //     //禁止手动往下滑
+                            //     swiper_body.allowSlideNext = false;//设置
+                            //     break;
                             case 1:
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page1 .text1").addClass("top_text");
@@ -395,6 +412,7 @@
                                 }, 1000);
                                 break;
                             case 2:
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page2 .text1").addClass("top_text");
@@ -403,6 +421,7 @@
                                 }, 1000);
                                 break;
                             case 3:
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page3 .opacity0").eq(0).addClass("show2_1");
@@ -424,6 +443,7 @@
                                 break;
                             case 4:
                                 swiper4_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     // $(".page9 .text1").addClass("top_text");
@@ -434,6 +454,7 @@
                                 break;
                             case 5:
                                 swiper5_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page5 .page_subset5_1").addClass("top_text");
@@ -442,6 +463,7 @@
                                 break;
                             case 6:
                                 swiper6_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page6 .page_subset6_1").addClass("top_text");
@@ -450,6 +472,7 @@
                                 break;
                             case 7:
                                 swiper7_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page7 .page_subset7_1").addClass("top_text");
@@ -458,6 +481,7 @@
                                 break;
                             case 8:
                                 swiper8_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page8 .page_subset8_1").addClass("top_text");
@@ -466,6 +490,7 @@
                                 break;
                             case 9:
                                 swiper9_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page9 .text1").addClass("top_text");
@@ -476,6 +501,7 @@
                                 break;
                             case 10:
                                 swiper10_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page10 .text1").addClass("top_text");
@@ -486,6 +512,7 @@
                                 break;
                             case 11:
                                 // swiper11_1.init();//现在才初始化
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page11 .text1").addClass("top_text");
@@ -495,6 +522,7 @@
                                 }, 1000);
                                 break;
                             case 12:
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page12 .text1").addClass("top_text");
@@ -505,6 +533,7 @@
                                 }, 1000);
                                 break;
                             case 13:
+                                // swiper_body.allowSlideNext = true;//设置
                                 setTimeout(() => {
 
                                     $(".page13 .text1").addClass("top_text");
@@ -748,12 +777,14 @@
             //开始
             $(".ks").on("click", function () {
                 audio.play();
+                swiper_body.allowSlideNext = true;//设置
                 swiper_body.slideNext();
             })
 
             $(".ks_wen").on("click", function () {
                 $(this).addClass("show1");
                 setTimeout(() => {
+                    swiper_body.allowSlideNext = true;//设置
                     swiper_body.slideNext();
                 }, 1500);
             })
