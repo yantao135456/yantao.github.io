@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黄埔H5</title>
+
+
+
     <link type="text/css" rel="stylesheet" href="https://static.zhihu.com/event/zhihu2018/asset/css/font.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
 
 </head>
 
@@ -57,7 +61,7 @@
                     <div class="r_txt4 opacity0">谈判思维</div>
                     <div class="r_txt5 opacity0">理性情绪行为</div>
                     <!-- 下面 -->
-                    <div class="b_txt1 opacity0">画一个问号</div>
+                    <div class="b_txt1 opacity0">点击问号</div>
                     <div class="b_txt2 opacity0">开启黄埔之旅</div>
                 </div>
             </div>
@@ -324,9 +328,12 @@
                 <div class="page13">
                     <div class="text1"></div>
                     <div class="text2">
-                        <img src="img/page13_2.png" alt="">
+                        <!-- <img src="img/page13_2.png" alt=""> -->
                     </div>
-                    <!-- <div class="public_top"></div> -->
+                    <!--canvas中的二维码-->
+                    <div id="qrDiv" style="display: none;"></div>
+                    <!--image形式的二维码-->
+                    <div class="bannerwechat" id="wecode"></div>
 
                 </div>
             </div>
@@ -337,10 +344,32 @@
 
     <!-- <script src="js/jquery.js"></script> -->
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/index.js"></script>
     <script language="javascript">
         $(function () {
+
+            $('#qrDiv').qrcode({
+                render: "canvas",
+                text: "https://www.wjx.cn/jq/62071936.aspx",
+                width: "120",               //二维码的宽度
+                height: "120",
+            });
+            function convertCanvasToImage(canvas) {
+                //新Image对象，可以理解为DOM
+                var image = new Image();
+                // canvas.toDataURL 返回的是一串Base64编码的URL，当然,浏览器自己肯定支持
+                // 指定格式PNG
+                image.src = canvas.toDataURL("image/png");
+                return image;
+            }
+            //获取网页中的canvas对象
+            var mycanvas1 = document.getElementsByTagName('canvas')[0];
+            //将转换后的img标签插入到html中
+            var img = convertCanvasToImage(mycanvas1);
+            $('#wecode').append(img);//imgDiv表示你要插入的容器id
+
 
 
 
@@ -393,6 +422,7 @@
                 direction: 'vertical',
                 effect: 'fade',
                 loop: false,
+                allowSlidePrev: false,
                 on: {
                     slideChangeTransitionEnd: function () {
 
@@ -545,7 +575,7 @@
 
             var swiper4_1 = new Swiper('.page_subset4_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -588,7 +618,7 @@
 
             var swiper5_1 = new Swiper('.page_subset5_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -610,7 +640,7 @@
 
             var swiper6_1 = new Swiper('.page_subset6_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -632,7 +662,7 @@
 
             var swiper7_1 = new Swiper('.page_subset7_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -654,7 +684,7 @@
 
             var swiper8_1 = new Swiper('.page_subset8_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -676,7 +706,7 @@
 
             var swiper9_1 = new Swiper('.page_subset9_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',
@@ -698,7 +728,7 @@
 
             var swiper10_1 = new Swiper('.page_subset10_1', {
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     stopOnLastSlide: true,
                 },
                 effect: 'fade',

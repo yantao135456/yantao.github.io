@@ -61,7 +61,7 @@ del {
 }
 
 html {
-  font-family: "fzjh", "Lucida Grande", "Lucida Sans Unicode", Arial, HELVETICA;
+  font-family: "webfont", "fzjh", "Lucida Grande", "Lucida Sans Unicode", Arial, HELVETICA;
   word-wrap: break-word;
   white-space: normal;
   word-break: break-all;
@@ -130,6 +130,10 @@ table {
   zoom: 1;
 }
 
+@font-face {
+  font-family: "webfont";
+  src: url("../font/h5.TTF") format("truetype");
+}
 @-webkit-keyframes top1 {
   0% {
     margin-top: 0.5rem;
@@ -140,7 +144,6 @@ table {
     opacity: 1;
   }
 }
-
 @keyframes top1 {
   0% {
     margin-top: 0.5rem;
@@ -501,7 +504,7 @@ table {
   height: 0.875rem;
 }
 .bodybox .page6 .page_subset {
-  top: 11.25rem;
+  top: 10.7rem;
 }
 .bodybox .page7 {
   background-image: url(../img/7.jpg);
