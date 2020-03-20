@@ -180,7 +180,8 @@ table {
 
 .public_top {
   position: absolute;
-  top: r(1200px);
+  // top: r(1200px);
+  top: r(1000px);
   left: 50%;
   transform: translateX(-50%);
   background: url(../img/top.png) no-repeat;

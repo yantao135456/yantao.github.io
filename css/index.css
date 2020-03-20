@@ -176,7 +176,7 @@ table {
 }
 .public_top {
   position: absolute;
-  top: 30rem;
+  top: 25rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
