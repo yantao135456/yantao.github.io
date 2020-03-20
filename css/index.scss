@@ -217,7 +217,8 @@ table {
       width: r(125px);
       height: r(117px);
       position: absolute;
-      top: r(580px);
+      // top: r(580px);
+      top: r(480px);
       left: 50%;
       transform: translateX(-50%);
       background: url(../img/loading.gif) no-repeat;
@@ -229,7 +230,8 @@ table {
       height: r(73px);
       background: url(../img/start.png) no-repeat center;
       background-size: 100%;
-      top: r(780px);
+      // top: r(780px);
+      top: r(680px);
       left: 50%;
       transform: translateX(-50%);
     }
@@ -441,6 +443,10 @@ table {
         // width: 100%;
         width: r(536px);
       }
+      //第四张照片往上100
+      &.page_subset4_1 {
+        top: r(220px);
+      }
     }
   }
   .page5 {
@@ -461,6 +467,10 @@ table {
     }
     .page_subset {
       top: r(450px);
+      //第五张照片往上100
+      &.page_subset5_1 {
+        top: r(350px);
+      }
     }
   }
   .page6 {
@@ -481,6 +491,10 @@ table {
     }
     .page_subset {
       top: r(428px);
+      //第六张照片往上200
+      &.page_subset6_1 {
+        top: r(228px);
+      }
     }
   }
   .page7 {
@@ -501,6 +515,10 @@ table {
     }
     .page_subset {
       top: r(450px);
+      //第七张照片往上100
+      &.page_subset7_1 {
+        top: r(350px);
+      }
     }
   }
   .page8 {
@@ -521,6 +539,10 @@ table {
     }
     .page_subset {
       top: r(450px);
+      //第八张照片往上200
+      &.page_subset8_1 {
+        top: r(250px);
+      }
     }
   }
   .page9 {
@@ -653,7 +675,7 @@ table {
     background-size: 100%;
     cursor: pointer;
   }
-  .audio_i_x{
+  .audio_i_x {
     background-image: url(../img/audio_x.png);
   }
 }
@@ -745,5 +767,3 @@ body .top_text4 {
   animation: show_text 1.5s 5s ease-out;
   animation-fill-mode: both;
 }
-
-

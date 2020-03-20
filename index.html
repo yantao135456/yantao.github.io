@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黄埔H5</title>
 
-
-
     <link type="text/css" rel="stylesheet" href="https://static.zhihu.com/event/zhihu2018/asset/css/font.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-
 
 </head>
 
@@ -335,8 +332,6 @@
         </div>
     </div>
 
-
-
     <!-- <script src="js/jquery.js"></script> -->
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
@@ -344,7 +339,6 @@
     <script src="js/index.js"></script>
     <script language="javascript">
         $(function () {
-
 
             function setfontsize() {
                 let ss = document.documentElement.clientWidth || document.body.clientWidth
@@ -371,7 +365,6 @@
                 return true
             }
 
-
             if (is_check() == false) {
                 //手机端
 
@@ -383,13 +376,6 @@
                 $(".body").addClass("body_pc");
 
             }
-
-
-
-
-
-
-
 
             var swiper_body = new Swiper('.bodybox', {
                 direction: 'vertical',
@@ -536,7 +522,6 @@
             });
 
             var swiper_body_index = swiper_body.activeIndex;
-
 
             // var swiper41 = new Swiper('.page_subset', {
             //     autoplay: {
@@ -775,7 +760,6 @@
 
             $("#img_qr").on("touchstart", function () {
 
-
                 //获取预览图片路径
                 var getObjectURL = function (file) {
                     var url = null;
@@ -795,12 +779,7 @@
                     console.log("imgMsg", imgMsg);
                 }
 
-
-
             })
-
-
-
 
         })
     </script>
